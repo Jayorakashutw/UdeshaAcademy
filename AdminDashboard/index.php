@@ -33,13 +33,13 @@
         <nav class="navbar-vertical navbar">
             <div class="vh-100" data-simplebar>
                 <!-- Brand logo -->
-                <a class="navbar-brand" href="../index-2.html">
-                    <img src="../assets/images/brand/logo/logo-inverse.svg" alt="Geeks" />
+                <a class="navbar-brand" href="index.php">
+                    <img src="../assets/images/brand/logo/adminlogo1.png" alt="UTWA" />
                 </a>
                 <!-- Navbar nav -->
                 <ul class="navbar-nav flex-column" id="sideNavbar">
                     <li class="nav-item">
-                        <a class="nav-link " href="admin-dashboard.html" data-bs-toggle="collapse" data-bs-target="#navDashboard" aria-expanded="false" aria-controls="navDashboard">
+                        <a class="nav-link " href="admin-dashboard.html">
                             <i class="nav-icon fe fe-home me-2"></i> Dashboard
                         </a>
                     </li>
@@ -342,143 +342,34 @@
                     <li class="nav-item">
                         <div class="nav-divider"></div>
                     </li>
-                    <!-- Nav item -->
-                    <li class="nav-item">
-                        <div class="navbar-heading">Components</div>
-                    </li>
-                    <!-- Nav item -->
-                    <li class="nav-item">
-                        <a class="nav-link  collapsed " href="#" data-bs-toggle="collapse" data-bs-target="#navTables" aria-expanded="false" aria-controls="navTables">
-                            <i class="nav-icon fe fe-database me-2"></i> Tables
-                        </a>
-                        <div id="navTables" class="collapse " data-bs-parent="#sideNavbar">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link " href="basic-table.html">Basic</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " href="datatables.html">Data Tables</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- Nav item -->
-                    <!-- Nav item -->
-                    <li class="nav-item">
-                        <a class="nav-link " href="../help-center.html">
-                            <i class="nav-icon fe fe-help-circle me-2"></i> Help Center
-                        </a>
-                    </li>
-                    <!-- Nav item -->
-                    <li class="nav-item">
-                        <a class="nav-link  collapsed " href="#" data-bs-toggle="collapse" data-bs-target="#navSiteSetting" aria-expanded="false" aria-controls="navSiteSetting">
-                            <i class="nav-icon fe fe-settings me-2"></i> Site Setting
-                        </a>
-                        <div id="navSiteSetting" class="collapse " data-bs-parent="#sideNavbar">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link " href="setting-general.html">General</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " href="setting-google.html">Google</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " href="setting-social.html">Social</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " href="setting-social-login.html">Social Login</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " href="setting-payment.html">Payment</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " href="setting-smpt.html">SMPT</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- Nav item -->
-                    <li class="nav-item">
-                        <a class="nav-link  collapsed " href="#" data-bs-toggle="collapse" data-bs-target="#navMenuLevel" aria-expanded="false" aria-controls="navMenuLevel">
-                            <i class="nav-icon fe fe-corner-left-down me-2"></i> Menu Level
-                        </a>
-                        <div id="navMenuLevel" class="collapse " data-bs-parent="#sideNavbar">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#navMenuLevelSecond" aria-expanded="false" aria-controls="navMenuLevelSecond">
-                Two Level
-              </a>
-                                    <div id="navMenuLevelSecond" class="collapse" data-bs-parent="#navMenuLevel">
-                                        <ul class="nav flex-column">
-                                            <li class="nav-item">
-                                                <a class="nav-link " href="#">NavItem 1</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " href="#">NavItem 2</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link  collapsed " href="#" data-bs-toggle="collapse" data-bs-target="#navMenuLevelThree" aria-expanded="false" aria-controls="navMenuLevelThree">
-                Three Level
-              </a>
-                                    <div id="navMenuLevelThree" class="collapse " data-bs-parent="#navMenuLevel">
-                                        <ul class="nav flex-column">
-                                            <li class="nav-item">
-                                                <a class="nav-link  collapsed " href="#" data-bs-toggle="collapse" data-bs-target="#navMenuLevelThreeOne" aria-expanded="false" aria-controls="navMenuLevelThreeOne">
-                      NavItem 1
+                    <a class="nav-link  collapsed " href="#" data-bs-toggle="collapse" data-bs-target="#navSiteSetting" aria-expanded="false" aria-controls="navSiteSetting">
+                        <i class="nav-icon fe fe-settings me-2"></i> Site Setting
                     </a>
-                                                <div id="navMenuLevelThreeOne" class="collapse collapse " data-bs-parent="#navMenuLevelThree">
-                                                    <ul class="nav flex-column">
-                                                        <li class="nav-item">
-                                                            <a class="nav-link " href="#">NavChild Item 1</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " href="#">Nav Item 2</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- Nav item -->
-                    <li class="nav-item">
-                        <div class="nav-divider"></div>
-                    </li>
-                    <!-- Nav item -->
-                    <li class="nav-item">
-                        <div class="navbar-heading">Documentation</div>
-                    </li>
-                    <!-- Nav item -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="../docs/index.html">
-                            <i class="nav-icon fe fe-clipboard me-2"></i> Documentation
-                        </a>
-                    </li>
-                    <!-- Nav item -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="../docs/changelog.html">
-                            <i class="nav-icon fe fe-git-pull-request me-2"></i> Changelog
-                            <span class="text-primary ms-1" id="changelog"></span>
-                        </a>
-                    </li>
-                </ul>
-                <!-- Card -->
-                <div class="card bg-dark-primary shadow-none text-center mx-4 my-8 border-0">
-                    <div class="card-body py-6">
-                        <img src="../assets/images/background/giftbox.png" alt="" />
-                        <div class="mt-4">
-                            <h5 class="text-white">Unlimited Access</h5>
-                            <p class="text-white-50 fs-6">Upgrade your plan from a Free trial, to select ‘Business Plan’. Start Now</p>
-                            <a href="#" class="btn btn-white btn-sm mt-2">Upgrade Now</a>
-                        </div>
+                    <div id="navSiteSetting" class="collapse " data-bs-parent="#sideNavbar">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link " href="setting-general.html">General</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="setting-google.html">Google</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="setting-social.html">Social</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="setting-social-login.html">Social Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="setting-payment.html">Payment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="setting-smpt.html">SMPT</a>
+                            </li>
+                        </ul>
                     </div>
-                </div>
+                    </li>
+
+
             </div>
         </nav>
 
@@ -490,43 +381,9 @@
                     <a id="nav-toggle" href="#">
                         <i class="fe fe-menu"></i>
                     </a>
-                    <div class="ms-lg-3 d-none d-md-none d-lg-block">
-                        <!-- Form -->
-                        <form class="d-flex align-items-center">
-                            <span class="position-absolute ps-3 search-icon">
-                    <i class="fe fe-search"></i>
-                </span>
-                            <input type="search" class="form-control ps-6" placeholder="Search Entire Dashboard" />
-                        </form>
-                    </div>
+
                     <!--Navbar nav -->
                     <div class="ms-auto d-flex">
-                        <div class="dropdown">
-                            <button class="btn btn-light btn-icon rounded-circle d-flex align-items-center" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
-                    <i class="bi theme-icon-active"></i>
-                    <span class="visually-hidden bs-theme-text">Toggle theme</span>
-                </button>
-                            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bs-theme-text">
-                                <li>
-                                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                            <i class="bi theme-icon bi-sun-fill"></i>
-                            <span class="ms-2">Light</span>
-                        </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                            <i class="bi theme-icon bi-moon-stars-fill"></i>
-                            <span class="ms-2">Dark</span>
-                        </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                            <i class="bi theme-icon bi-circle-half"></i>
-                            <span class="ms-2">Auto</span>
-                        </button>
-                                </li>
-                            </ul>
-                        </div>
                         <ul class="navbar-nav navbar-right-wrap ms-2 d-flex nav-top-wrap">
                             <li class="dropdown stopevent">
                                 <a class="btn btn-light btn-icon rounded-circle indicator indicator-primary" href="#" role="button" id="dropdownNotification" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
