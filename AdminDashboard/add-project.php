@@ -1,11 +1,8 @@
 <!doctype html>
 <html lang="en">
 
-
-<!-- Mirrored from geeksui.codescandy.com/geeks/pages/dashboard/admin-cms-post-category.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Jun 2025 05:49:36 GMT -->
-
 <head>
-    <link rel="stylesheet" href="../assets/libs/quill/dist/quill.snow.css" />
+    <link rel="stylesheet" href="../assets/libs/flatpickr/dist/flatpickr.min.css" />
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,8 +21,9 @@
     <!-- Theme CSS -->
     <link rel="stylesheet" href="../assets/css/theme.min.css">
 
-    <link rel="canonical" href="admin-cms-post-category.html" />
-    <title>CMS Category | Geeks - Bootstrap 5 Admin Dashboard Template</title>
+    <link rel="canonical" href="add-project.html" />
+    <link href="../assets/libs/dropzone/dist/dropzone.css" rel="stylesheet" />
+    <title>Create Project | Udesha Academy</title>
 </head>
 
 <body>
@@ -94,10 +92,10 @@
 
                     <!-- Nav item -->
                     <li class="nav-item">
-                        <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#navCMS" aria-expanded="false" aria-controls="navCMS">
+                        <a class="nav-link  collapsed " href="#" data-bs-toggle="collapse" data-bs-target="#navCMS" aria-expanded="false" aria-controls="navCMS">
                             <i class="nav-icon fe fe-book-open me-2"></i> CMS
                         </a>
-                        <div id="navCMS" class="collapse  show " data-bs-parent="#sideNavbar">
+                        <div id="navCMS" class="collapse " data-bs-parent="#sideNavbar">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
                                     <a class="nav-link " href="admin-cms-overview.html">Overview</a>
@@ -109,17 +107,17 @@
                                     <a class="nav-link " href="admin-cms-post-new.html">New Post</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link  active " href="admin-cms-post-category.html">Category</a>
+                                    <a class="nav-link " href="admin-cms-post-category.html">Category</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
                     <!-- Nav item -->
                     <li class="nav-item">
-                        <a class="nav-link  collapsed " href="#" data-bs-toggle="collapse" data-bs-target="#navProject" aria-expanded="false" aria-controls="navProject">
+                        <a class="nav-link " href="#" data-bs-toggle="collapse" data-bs-target="#navProject" aria-expanded="false" aria-controls="navProject">
                             <i class="nav-icon fe fe-file me-2"></i> Project
                         </a>
-                        <div id="navProject" class="collapse " data-bs-parent="#sideNavbar">
+                        <div id="navProject" class="collapse  show " data-bs-parent="#sideNavbar">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
                                     <a class="nav-link " href="project-grid.html">Grid</a>
@@ -155,7 +153,7 @@
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " href="add-project.html">Create Project</a>
+                                    <a class="nav-link  active " href="add-project.html">Create Project</a>
                                 </li>
                             </ul>
                         </div>
@@ -748,597 +746,153 @@
             <!-- Container fluid -->
             <section class="container-fluid p-4">
                 <div class="row">
-                    <!-- Page Header -->
                     <div class="col-lg-12 col-md-12 col-12">
-                        <div class="border-bottom pb-3 mb-3 d-flex flex-column flex-md-row gap-3 align-items-md-center justify-content-between">
+                        <!-- Page header -->
+                        <div class="border-bottom pb-3 mb-3 d-flex flex-column flex-lg-row gap-3 align-items-lg-center justify-content-between">
                             <div class="d-flex flex-column gap-1">
-                                <h1 class="mb-0 h2 fw-bold">Category</h1>
+                                <h1 class="mb-0 h2 fw-bold">Create New Project</h1>
                                 <!-- Breadcrumb -->
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item">
                                             <a href="admin-dashboard.html">Dashboard</a>
                                         </li>
-                                        <li class="breadcrumb-item"><a href="#">CMS</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Category</li>
+                                        <li class="breadcrumb-item">
+                                            <a href="#">Project</a>
+                                        </li>
+                                        <li class="breadcrumb-item active" aria-current="page">Create Project</li>
                                     </ol>
                                 </nav>
                             </div>
+                            <!-- button -->
                             <div>
-                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newCatgory">Add New
-                  Category</a>
+                                <a href="project-grid.html" class="btn btn-primary me-2">Back to Project</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-12">
-                        <!-- Card -->
-                        <div class="card mb-4">
-                            <!-- Card Header -->
-                            <div class="card-header border-bottom-0">
-                                <!-- Form -->
-                                <form class="d-flex align-items-center">
-                                    <span class="position-absolute ps-3 search-icon">
-                    <i class="fe fe-search"></i>
-                  </span>
-                                    <input type="search" class="form-control ps-6" placeholder="Search Category" />
-                                </form>
-                            </div>
-                            <!-- Table -->
-                            <div class="table-responsive border-0 overflow-y-hidden">
-                                <table class="table mb-0 text-nowrap table-centered table-hover table-with-checkbox">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="checkAll" />
-                                                    <label class="form-check-label" for="checkAll"></label>
+                <div class="py-6">
+                    <!-- row -->
+                    <div class="row">
+                        <div class="offset-xl-3 col-xl-6 col-md-12 col-12">
+                            <!-- card -->
+                            <div class="card">
+                                <!-- card body -->
+                                <div class="card-body p-lg-6">
+                                    <!-- form -->
+                                    <form class="row gx-3 needs-validation" novalidate>
+                                        <!-- form group -->
+                                        <div class="mb-3 col-12">
+                                            <label class="form-label">
+                          Name
+                          <span class="text-danger">*</span>
+                        </label>
+                                            <input type="text" class="form-control" placeholder="Enter project title" required />
+                                            <div class="invalid-feedback">Please enter first title.</div>
+                                        </div>
+                                        <!-- form group -->
+                                        <div class="mb-3 col-12">
+                                            <label class="form-label">Description</label>
+                                            <textarea class="form-control" placeholder="Enter brief about project..." rows="3" required></textarea>
+                                            <div class="invalid-feedback">Please enter messages.</div>
+                                        </div>
+                                        <!-- form group -->
+                                        <div class="mb-3 col-md-6 col-12">
+                                            <label class="form-label">
+                          Start Date
+                          <span class="text-danger">*</span>
+                        </label>
+                                            <div class="input-group me-3">
+                                                <input class="form-control flatpickr" type="text" placeholder="Select Date" aria-describedby="basic-addon2" />
+
+                                                <span class="input-group-text" id="basic-addon2"><i class="fe fe-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                        <!-- form group -->
+                                        <div class="mb-3 col-md-6 col-12">
+                                            <label class="form-label">
+                          End Date
+                          <span class="text-danger">*</span>
+                        </label>
+                                            <div class="input-group me-3">
+                                                <input class="form-control flatpickr" type="text" placeholder="Select Date" aria-describedby="basic-addon3" />
+
+                                                <span class="input-group-text" id="basic-addon3"><i class="fe fe-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                        <!-- form group -->
+                                        <div class="mb-3 col-md-6 col-12">
+                                            <label class="form-label" for="privacy">Privacy</label>
+                                            <select class="form-select" data-choices="" id="privacy" required>
+                          <option value="">Select Privacy</option>
+                          <option value="Public to you team">Public to you team</option>
+                          <option value="Private to project members">Private to project members</option>
+                          <option value="Private to you">Private to you</option>
+                        </select>
+                                            <div class="invalid-feedback">Please choose option.</div>
+                                        </div>
+                                        <!-- form group -->
+                                        <div class="mb-3 col-md-6 col-12">
+                                            <label class="form-label" for="teamMembers">Team Members</label>
+                                            <select class="form-select" data-choices="" id="teamMembers" required>
+                          <option value="">Assign to owner</option>
+                          <option value="Eleanor Pena">Eleanor Pena</option>
+                          <option value="Courtney Henry">Courtney Henry</option>
+                          <option value="Assign to Owner">Assign to Owner</option>
+                        </select>
+                                            <div class="invalid-feedback">Please choose option.</div>
+                                        </div>
+                                        <!-- form group -->
+                                        <div class="mb-3 col-md-6 col-12">
+                                            <label class="form-label" for="budget">Budget</label>
+                                            <select class="form-select" data-choices="" id="budget" required>
+                          <option value="">Project Budget</option>
+                          <option value="Based on Project Amount">Based on Project Amount</option>
+                          <option value="Based on Project Hours">Based on Project Hours</option>
+                        </select>
+                                            <div class="invalid-feedback">Please choose option.</div>
+                                        </div>
+                                        <!-- form group -->
+                                        <div class="mb-3 col-md-6 col-12">
+                                            <label class="form-label" for="priority">Priority</label>
+                                            <select class="form-select" data-choices="" id="priority" required>
+                          <option value="">Set Priority</option>
+                          <option value="High">High</option>
+                          <option value="Medium">Medium</option>
+                          <option value="Low">Low</option>
+                        </select>
+                                            <div class="invalid-feedback">Please choose option.</div>
+                                        </div>
+
+                                        <div class="col-md-3 col-12 mb-4">
+                                            <div>
+                                                <!-- logo -->
+                                                <h5 class="mb-3">Project Logo</h5>
+                                                <div class="icon-shape icon-xxl border rounded position-relative">
+                                                    <span class="position-absolute"><i class="bi bi-image fs-3"></i></span>
+                                                    <input class="form-control border-0 opacity-0" type="file" />
                                                 </div>
-                                            </th>
-                                            <th>Category</th>
-                                            <th>Slug</th>
-                                            <th>Posts</th>
-                                            <th>Date Category</th>
-                                            <th>Date Updated</th>
-                                            <th>Status</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="accordion-toggle collapsed" id="accordion1" data-bs-toggle="collapse" data-bs-parent="#accordion1" data-bs-target="#collapseOne">
-                                            <td>
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="categoryCheck1" />
-                                                    <label class="form-check-label" for="categoryCheck1"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="text-inherit position-relative">
-                                                    <h5 class="mb-0 text-primary-hover">
-                                                        <i class="fe fe-chevron-down fs-4 me-2 position-absolute ms-n4 mt-1"></i> Courses
-                                                    </h5>
-                                                </a>
-                                            </td>
-                                            <td>desgincourse</td>
-                                            <td>1</td>
-                                            <td>16 Oct, 2020</td>
-                                            <td>16 Nov, 2020</td>
-                                            <td>
-                                                <span class="badge bg-success">Live</span>
-                                            </td>
-                                            <td>
-                                                <span class="dropdown dropstart">
-                          <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button"
-                            id="courseDropdown1" data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                            aria-expanded="false">
-                            <i class="fe fe-more-vertical"></i>
-                          </a>
-                          <span class="dropdown-menu" aria-labelledby="courseDropdown1">
-                            <span class="dropdown-header">Action</span>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-send dropdown-item-icon"></i> Publish
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-inbox dropdown-item-icon"></i> Moved Draft
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-trash dropdown-item-icon"></i> Delete
-                                                </a>
-                                                </span>
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr id="collapseOne">
-                                            <td>
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="categoryCheck2" />
-                                                    <label class="form-check-label" for="categoryCheck2"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="text-inherit">
-                                                    <h5 class="mb-0 text-primary-hover ms-3">Child Category</h5>
-                                                </a>
-                                            </td>
-                                            <td>childcategory</td>
-                                            <td>4</td>
-                                            <td>16 Oct, 2020</td>
-                                            <td>16 Nov, 2020</td>
-                                            <td>
-                                                <span class="badge bg-warning">Draft</span>
-                                            </td>
-                                            <td>
-                                                <span class="dropdown dropstart">
-                          <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button"
-                            id="courseDropdown2" data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                            aria-expanded="false">
-                            <i class="fe fe-more-vertical"></i>
-                          </a>
-                          <span class="dropdown-menu" aria-labelledby="courseDropdown2">
-                            <span class="dropdown-header">Action</span>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-send dropdown-item-icon"></i> Publish
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-inbox dropdown-item-icon"></i> Moved Draft
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-trash dropdown-item-icon"></i> Delete
-                                                </a>
-                                                </span>
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="categoryCheck3" />
-                                                    <label class="form-check-label" for="categoryCheck3"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="text-inherit">
-                                                    <h5 class="mb-0 text-primary-hover">Workshop</h5>
-                                                </a>
-                                            </td>
-                                            <td>Workshop</td>
-                                            <td>6</td>
-                                            <td>16 Oct, 2020</td>
-                                            <td>16 Nov, 2020</td>
-                                            <td>
-                                                <span class="badge bg-success">Live</span>
-                                            </td>
-                                            <td>
-                                                <span class="dropdown dropstart">
-                          <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button"
-                            id="courseDropdown3" data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                            aria-expanded="false">
-                            <i class="fe fe-more-vertical"></i>
-                          </a>
-                          <span class="dropdown-menu" aria-labelledby="courseDropdown3">
-                            <span class="dropdown-header">Action</span>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-send dropdown-item-icon"></i> Publish
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-inbox dropdown-item-icon"></i> Moved Draft
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-trash dropdown-item-icon"></i> Delete
-                                                </a>
-                                                </span>
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="categoryCheck4" />
-                                                    <label class="form-check-label" for="categoryCheck4"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="text-inherit">
-                                                    <h5 class="mb-0 text-primary-hover">Tutorial</h5>
-                                                </a>
-                                            </td>
-                                            <td>tutorial</td>
-                                            <td>3</td>
-                                            <td>16 Oct, 2020</td>
-                                            <td>16 Nov, 2020</td>
-                                            <td>
-                                                <span class="badge bg-success">Live</span>
-                                            </td>
-                                            <td>
-                                                <span class="dropdown dropstart">
-                          <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button"
-                            id="courseDropdown4" data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                            aria-expanded="false">
-                            <i class="fe fe-more-vertical"></i>
-                          </a>
-                          <span class="dropdown-menu" aria-labelledby="courseDropdown4">
-                            <span class="dropdown-header">Action</span>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-send dropdown-item-icon"></i> Publish
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-inbox dropdown-item-icon"></i> Moved Draft
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-trash dropdown-item-icon"></i> Delete
-                                                </a>
-                                                </span>
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="categoryCheck5" />
-                                                    <label class="form-check-label" for="categoryCheck5"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="text-inherit">
-                                                    <h5 class="mb-0 text-primary-hover">Company</h5>
-                                                </a>
-                                            </td>
-                                            <td>company</td>
-                                            <td>4</td>
-                                            <td>16 Oct, 2020</td>
-                                            <td>16 Nov, 2020</td>
-                                            <td>
-                                                <span class="badge bg-success">Live</span>
-                                            </td>
-                                            <td>
-                                                <span class="dropdown dropstart">
-                          <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button"
-                            id="courseDropdown5" data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                            aria-expanded="false">
-                            <i class="fe fe-more-vertical"></i>
-                          </a>
-                          <span class="dropdown-menu" aria-labelledby="courseDropdown5">
-                            <span class="dropdown-header">Action</span>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-send dropdown-item-icon"></i> Publish
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-inbox dropdown-item-icon"></i> Moved Draft
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-trash dropdown-item-icon"></i> Delete
-                                                </a>
-                                                </span>
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="categoryCheck6" />
-                                                    <label class="form-check-label" for="categoryCheck6"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="text-inherit">
-                                                    <h5 class="mb-0 text-primary-hover">Technology</h5>
-                                                </a>
-                                            </td>
-                                            <td>technology</td>
-                                            <td>6</td>
-                                            <td>16 Oct, 2020</td>
-                                            <td>16 Nov, 2020</td>
-                                            <td>
-                                                <span class="badge bg-success">Live</span>
-                                            </td>
-                                            <td>
-                                                <span class="dropdown dropstart">
-                          <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button"
-                            id="courseDropdown6" data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                            aria-expanded="false">
-                            <i class="fe fe-more-vertical"></i>
-                          </a>
-                          <span class="dropdown-menu" aria-labelledby="courseDropdown6">
-                            <span class="dropdown-header">Action</span>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-send dropdown-item-icon"></i> Publish
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-inbox dropdown-item-icon"></i> Moved Draft
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-trash dropdown-item-icon"></i> Delete
-                                                </a>
-                                                </span>
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="align-middle">
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="categoryCheck7" />
-                                                    <label class="form-check-label" for="categoryCheck7"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="text-inherit">
-                                                    <h5 class="mb-0 text-primary-hover">Business</h5>
-                                                </a>
-                                            </td>
-                                            <td class="align-middle">business</td>
-                                            <td class="align-middle">2</td>
-                                            <td class="align-middle">16 Oct, 2020</td>
-                                            <td>16 Nov, 2020</td>
-                                            <td>
-                                                <span class="badge bg-warning">Draft</span>
-                                            </td>
-                                            <td>
-                                                <span class="dropdown dropstart">
-                          <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button"
-                            id="courseDropdown7" data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                            aria-expanded="false">
-                            <i class="fe fe-more-vertical"></i>
-                          </a>
-                          <span class="dropdown-menu" aria-labelledby="courseDropdown7">
-                            <span class="dropdown-header">Action</span>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-send dropdown-item-icon"></i> Publish
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-inbox dropdown-item-icon"></i> Moved Draft
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-trash dropdown-item-icon"></i> Delete
-                                                </a>
-                                                </span>
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="align-middle">
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="categoryCheck8" />
-                                                    <label class="form-check-label" for="categoryCheck8"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="text-inherit">
-                                                    <h5 class="mb-0 text-primary-hover">Technology</h5>
-                                                </a>
-                                            </td>
-                                            <td>technology</td>
-                                            <td>1</td>
-                                            <td>16 Oct, 2020</td>
-                                            <td>16 Nov, 2020</td>
-                                            <td>
-                                                <span class="badge bg-success">Live</span>
-                                            </td>
-                                            <td>
-                                                <span class="dropdown dropstart">
-                          <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button"
-                            id="courseDropdown8" data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                            aria-expanded="false">
-                            <i class="fe fe-more-vertical"></i>
-                          </a>
-                          <span class="dropdown-menu" aria-labelledby="courseDropdown8">
-                            <span class="dropdown-header">Action</span>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-send dropdown-item-icon"></i> Publish
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-inbox dropdown-item-icon"></i> Moved Draft
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-trash dropdown-item-icon"></i> Delete
-                                                </a>
-                                                </span>
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="categoryCheck9" />
-                                                    <label class="form-check-label" for="categoryCheck9"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="text-inherit">
-                                                    <h5 class="mb-0 text-primary-hover">Business</h5>
-                                                </a>
-                                            </td>
-                                            <td>business</td>
-                                            <td>1</td>
-                                            <td>16 Oct, 2020</td>
-                                            <td>16 Nov, 2020</td>
-                                            <td>
-                                                <span class="badge bg-success">Live</span>
-                                            </td>
-                                            <td>
-                                                <span class="dropdown dropstart">
-                          <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button"
-                            id="courseDropdown9" data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                            aria-expanded="false">
-                            <i class="fe fe-more-vertical"></i>
-                          </a>
-                          <span class="dropdown-menu" aria-labelledby="courseDropdown9">
-                            <span class="dropdown-header">Action</span>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-send dropdown-item-icon"></i> Publish
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-inbox dropdown-item-icon"></i> Moved Draft
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-trash dropdown-item-icon"></i> Delete
-                                                </a>
-                                                </span>
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="categoryCheck10" />
-                                                    <label class="form-check-label" for="categoryCheck10"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="text-inherit">
-                                                    <h5 class="mb-0 text-primary-hover">Tutorial</h5>
-                                                </a>
-                                            </td>
-                                            <td>tutorial</td>
-                                            <td>4</td>
-                                            <td>16 Oct, 2020</td>
-                                            <td>16 Nov, 2020</td>
-                                            <td>
-                                                <span class="badge bg-success">Live</span>
-                                            </td>
-                                            <td>
-                                                <span class="dropdown dropstart">
-                          <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button"
-                            id="courseDropdown10" data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                            aria-expanded="false">
-                            <i class="fe fe-more-vertical"></i>
-                          </a>
-                          <span class="dropdown-menu" aria-labelledby="courseDropdown10">
-                            <span class="dropdown-header">Action</span>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-send dropdown-item-icon"></i> Publish
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-inbox dropdown-item-icon"></i> Moved Draft
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-trash dropdown-item-icon"></i> Delete
-                                                </a>
-                                                </span>
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="categoryCheck11" />
-                                                    <label class="form-check-label" for="categoryCheck11"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="text-inherit">
-                                                    <h5 class="mb-0 text-primary-hover">Workshop</h5>
-                                                </a>
-                                            </td>
-                                            <td>workshop</td>
-                                            <td>4</td>
-                                            <td>16 Oct, 2020</td>
-                                            <td>16 Nov, 2020</td>
-                                            <td>
-                                                <span class="badge bg-success">Live</span>
-                                            </td>
-                                            <td class="align-middle border-bottom-0">
-                                                <span class="dropdown dropstart">
-                          <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button"
-                            id="courseDropdown11" data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                            aria-expanded="false">
-                            <i class="fe fe-more-vertical"></i>
-                          </a>
-                          <span class="dropdown-menu" aria-labelledby="courseDropdown11">
-                            <span class="dropdown-header">Action</span>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-send dropdown-item-icon"></i> Publish
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-inbox dropdown-item-icon"></i> Moved Draft
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fe fe-trash dropdown-item-icon"></i> Delete
-                                                </a>
-                                                </span>
-                                                </span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mb-4">
+                                            <h5 class="mb-3">Cover Image</h5>
+
+                                            <div id="my-dropzone" class="dropzone mt-4 border-dashed rounded-2 min-h-0"></div>
+                                        </div>
+                                        <div class="col-md-8"></div>
+                                        <!-- button -->
+                                        <div class="col-12">
+                                            <button class="btn btn-primary" type="submit">Submit</button>
+                                            <button type="button" class="btn btn-outline-primary ms-2" data-bs-dismiss="offcanvas" aria-label="Close">Close</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="newCatgory" tabindex="-1" role="dialog" aria-labelledby="newCatgoryLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title mb-0" id="newCatgoryLabel">Create New Category</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3 mb-2">
-                            <label class="form-label" for="title">
-                Title
-                <span class="text-danger">*</span>
-              </label>
-                            <input type="text" class="form-control" placeholder="Write a Category" id="title" required />
-                            <small>Field must contain a unique value</small>
-                        </div>
-                        <div class="mb-3 mb-2">
-                            <label class="form-label">Slug</label>
-                            <label for="basic-url" class="form-label">Your vanity URL</label>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon3">https://example.com</span>
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" />
-                            </div>
-
-                            <small>Field must contain a unique value</small>
-                        </div>
-                        <div class="mb-3 mb-2">
-                            <label class="form-label">Parent</label>
-                            <select class="form-select" data-choices="">
-                <option value="">Select</option>
-                <option value="Course">Course</option>
-                <option value="Tutorial">Tutorial</option>
-                <option value="Workshop">Workshop</option>
-                <option value="Company">Company</option>
-              </select>
-                        </div>
-                        <div class="mb-3 mb-3">
-                            <label class="form-label">Description</label>
-                            <div id="editor">
-                                <br />
-                                <h4>One Ring to Rule Them All</h4>
-                                <br />
-                                <p>
-                                    Three Rings for the
-                                    <i>Elven-kingsunder</i> the sky,
-                                    <br /> Seven for the
-                                    <u>Dwarf-lords</u> in halls of stone, Nine for Mortal Men,
-                                    <br /> doomed to die, One for the Dark Lord on his dark throne.
-                                    <br /> In the Land of Mordor where the Shadows lie.
-                                    <br />
-                                    <br />
-                                </p>
-                            </div>
-                        </div>
-                        <div class="mb-2">
-                            <label class="form-label">Enabled</label>
-                            <div class="form-check form-switch">
-                                <input type="checkbox" class="form-check-input" id="customSwitch1" checked />
-                                <label class="form-check-label" for="customSwitch1"></label>
-                            </div>
-                        </div>
-                        <div>
-                            <button type="submit" class="btn btn-primary">Add New Category</button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- Scripts -->
@@ -1350,15 +904,13 @@
     <!-- Theme JS -->
     <script src="../assets/js/theme.min.js"></script>
 
-    <script src="../assets/libs/quill/dist/quill.js"></script>
-
-    <script src="../assets/js/vendors/editor.js"></script>
+    <script src="../assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="../assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="../assets/js/vendors/flatpickr.js"></script>
+    <script src="../assets/js/vendors/validation.js"></script>
+    <script src="../assets/js/vendors/dropzone.js"></script>
     <script src="../assets/libs/choices.js/public/../assets/scripts/choices.min.js"></script>
 
     <script src="../assets/js/vendors/choice.js"></script>
 </body>
-
-
-<!-- Mirrored from geeksui.codescandy.com/geeks/pages/dashboard/admin-cms-post-category.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Jun 2025 05:49:36 GMT -->
-
 </html>
