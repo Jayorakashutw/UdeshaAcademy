@@ -254,7 +254,9 @@
                         <!-- Page header -->
                         <div class="border-bottom pb-3 mb-3 d-flex flex-column flex-lg-row gap-3 align-items-lg-center justify-content-between">
                             <div class="d-flex flex-column gap-1">
+
                                 <h1 class="mb-0 h2 fw-bold">Add New Category</h1>
+
                             </div>
                         </div>
                     </div>
@@ -266,11 +268,14 @@
                                 <div class="card-body p-lg-10">
                                     <form class="row gx-3 needs-validation" novalidate enctype="multipart/form-data">
                                         <div class="mb-3 col-12">
+ CourseAll
                                             <label class="form-label">Category Name <span class="text-danger">*</span></label>
                                             <input type="text" class="form-control" name="category_name" placeholder="Enter your category name" required />
                                             <div class="invalid-feedback">Please enter category name.</div>
+
                                         </div>
                                         <div class="mb-3 col-12">
+
                                             <label class="form-label">Pick Your Icon</label>
                                             <input type="text" class="form-control" name="category_icon" placeholder="Pick your category icon" />
                                         </div>
@@ -289,6 +294,7 @@
                                         <div class="mb-3 col-12">
                                             <label class="form-label">Category logo <span class="text-muted">(optional)</span></label>
                                             <input class="form-control" type="file" name="category_logo" />
+
                                         </div>
                                         <div class="col-12">
                                             <button class="btn btn-primary" type="submit">Submit</button>

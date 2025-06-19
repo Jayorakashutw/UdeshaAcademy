@@ -32,7 +32,7 @@
                                     ">Course Content</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " href="courselist.php">Course List</a>
+                                    <a class="nav-link " href="courseList.php">Course List</a>
                                 </li>
                             </ul>
                         </div>

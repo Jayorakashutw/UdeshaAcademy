@@ -43,10 +43,8 @@
                             <div class="d-flex flex-column gap-1">
                                 <h1 class="mb-0 h2 fw-bold">Add Course</h1>
                                 <!-- Breadcrumb -->
-
                             </div>
                             <!-- button -->
-
                         </div>
                     </div>
                 </div>
@@ -63,7 +61,7 @@
                                         <!-- form group -->
                                         <div class="mb-3 col-12">
                                             <label class="form-label">
-                          Name
+                          Topic Name
                           <span class="text-danger">*</span>
                         </label>
                                             <input type="text" class="form-control" placeholder="Enter project title" required />
