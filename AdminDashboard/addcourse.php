@@ -29,6 +29,7 @@
     <!-- Wrapper -->
     <div id="db-wrapper">
         <!-- navbar vertical -->
+        <!-- Sidebar -->
         <?php include 'includes/adminheader.php'; ?>
         <!-- Page Content -->
         <main id="page-content">
@@ -253,7 +254,7 @@
                         <!-- Page header -->
                         <div class="border-bottom pb-3 mb-3 d-flex flex-column flex-lg-row gap-3 align-items-lg-center justify-content-between">
                             <div class="d-flex flex-column gap-1">
-                                <h1 class="mb-0 h2 fw-bold">Add Course</h1>
+                                <h1 class="mb-0 h2 fw-bold">Add Courses</h1>
                                 <!-- Breadcrumb -->
 
                             </div>
@@ -273,57 +274,65 @@
                                     <!-- form -->
                                     <form class="row gx-3 needs-validation" novalidate>
                                         <!-- form group -->
-                                        <div class="mb-3 col-12">
+                                        <div class="mb-3 col-6">
                                             <label class="form-label">
-                          Name
-                          <span class="text-danger">*</span>
-                        </label>
+                                               Course Title
+                                            <span class="text-danger">*</span>
+                                            </label>
                                             <input type="text" class="form-control" placeholder="Enter project title" required />
-                                            <div class="invalid-feedback">Please enter first title.</div>
+                                            <div class="invalid-feedback">Please enter Course Name</div>
+                                        </div>
+
+                                        <div class="mb-3 col-6">
+                                            <label class="form-label">
+                                               Course Title
+                                            <span class="text-danger">*</span>
+                                            </label>
+                                            <label class="form-label" for="priority">Course Category</label>
+                                            <select class="form-select" data-choices="" id="priority" required>
+                                                <option value="">Should come from DB</option>    
+                                                <option value="Days">Programming Language</option>
+                                                <option value="High">Design</option>
+                                                <option value="Medium">Web Development</option>
+                                         
+                                            </select>
+                                            <div class="invalid-feedback">Please select Category</div>
                                         </div>
                                         <!-- form group -->
                                         <div class="mb-3 col-12">
                                             <label class="form-label">Description</label>
                                             <textarea class="form-control" placeholder="Enter brief about project..." rows="3" required></textarea>
-                                            <div class="invalid-feedback">Please enter messages.</div>
+                                            <div class="invalid-feedback">Please enter Description.</div>
                                         </div>
 
 
                                         <!-- form group -->
                                         <div class="mb-3 col-md-6 col-12">
                                             <label class="form-label" for="budget">Course Fee</label>
-                                            <select class="form-select" data-choices="" id="budget" required>
-                          <option value="">Project Budget</option>
-                          <option value="Based on Project Amount">Based on Project Amount</option>
-                          <option value="Based on Project Hours">Based on Project Hours</option>
-                        </select>
+                                            <input type="text" class="form-control" placeholder="Enter Course Fee" required />
                                             <div class="invalid-feedback">Please choose option.</div>
                                         </div>
                                         <!-- form group -->
                                         <div class="mb-3 col-md-6 col-12">
                                             <label class="form-label" for="priority">Duration</label>
-                                            <select class="form-select" data-choices="" id="priority" required>
-                          <option value="">Set Priority</option>
-                          <option value="High">High</option>
-                          <option value="Medium">Medium</option>
-                          <option value="Low">Low</option>
-                        </select>
+                                              <input type="text" class="form-control" placeholder="Enter Course Duration" required />
                                             <div class="invalid-feedback">Please choose option.</div>
                                         </div>
                                         <div class="mb-3 col-md-6 col-12">
                                             <label class="form-label" for="priority">Duration Type</label>
                                             <select class="form-select" data-choices="" id="priority" required>
-                          <option value="">Set Priority</option>
-                          <option value="High">High</option>
-                          <option value="Medium">Medium</option>
-                          <option value="Low">Low</option>
-                        </select>
+                                                <option value="">Select Duration Type</option>    
+                                                <option value="Days">Days</option>
+                                                <option value="High">Weeks</option>
+                                                <option value="Medium">Months</option>
+                                         
+                                            </select>
                                             <div class="invalid-feedback">Please choose option.</div>
                                         </div>
                                         <div class="col-md-3 col-12 mb-4">
                                             <div>
                                                 <!-- logo -->
-                                                <h5 class="mb-3">Course Image</h5>
+                                                <h5 class="mb-3">Category Image</h5>
 
 
                                                 <input class="form-control" type="file" />

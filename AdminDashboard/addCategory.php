@@ -254,7 +254,7 @@
                         <!-- Page header -->
                         <div class="border-bottom pb-3 mb-3 d-flex flex-column flex-lg-row gap-3 align-items-lg-center justify-content-between">
                             <div class="d-flex flex-column gap-1">
-                                <h1 class="mb-0 h2 fw-bold">Add Course</h1>
+                                <h1 class="mb-0 h2 fw-bold">Add Category</h1>
                                 <!-- Breadcrumb -->
 
                             </div>
@@ -276,55 +276,25 @@
                                         <!-- form group -->
                                         <div class="mb-3 col-12">
                                             <label class="form-label">
-                          Name
+                          Category Name
                           <span class="text-danger">*</span>
                         </label>
                                             <input type="text" class="form-control" placeholder="Enter project title" required />
-                                            <div class="invalid-feedback">Please enter first title.</div>
+                                            <div class="invalid-feedback">Please enter Course Category</div>
                                         </div>
                                         <!-- form group -->
                                         <div class="mb-3 col-12">
                                             <label class="form-label">Description</label>
                                             <textarea class="form-control" placeholder="Enter brief about project..." rows="3" required></textarea>
-                                            <div class="invalid-feedback">Please enter messages.</div>
+                                            <div class="invalid-feedback">Please enter Description.</div>
                                         </div>
 
 
-                                        <!-- form group -->
-                                        <div class="mb-3 col-md-6 col-12">
-                                            <label class="form-label" for="budget">Course Fee</label>
-                                            <select class="form-select" data-choices="" id="budget" required>
-                          <option value="">Project Budget</option>
-                          <option value="Based on Project Amount">Based on Project Amount</option>
-                          <option value="Based on Project Hours">Based on Project Hours</option>
-                        </select>
-                                            <div class="invalid-feedback">Please choose option.</div>
-                                        </div>
-                                        <!-- form group -->
-                                        <div class="mb-3 col-md-6 col-12">
-                                            <label class="form-label" for="priority">Duration</label>
-                                            <select class="form-select" data-choices="" id="priority" required>
-                          <option value="">Set Priority</option>
-                          <option value="High">High</option>
-                          <option value="Medium">Medium</option>
-                          <option value="Low">Low</option>
-                        </select>
-                                            <div class="invalid-feedback">Please choose option.</div>
-                                        </div>
-                                        <div class="mb-3 col-md-6 col-12">
-                                            <label class="form-label" for="priority">Duration Type</label>
-                                            <select class="form-select" data-choices="" id="priority" required>
-                          <option value="">Set Priority</option>
-                          <option value="High">High</option>
-                          <option value="Medium">Medium</option>
-                          <option value="Low">Low</option>
-                        </select>
-                                            <div class="invalid-feedback">Please choose option.</div>
-                                        </div>
+                                        
                                         <div class="col-md-3 col-12 mb-4">
                                             <div>
                                                 <!-- logo -->
-                                                <h5 class="mb-3">Course Image</h5>
+                                                <h5 class="mb-3">Category Image</h5>
 
 
                                                 <input class="form-control" type="file" />
